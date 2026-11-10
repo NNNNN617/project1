@@ -1,0 +1,401 @@
+@charset "UTF-8";
+/* 
+==================================================
+  Sober Picnic 官方網站獨立 CSS (style.css)
+  視覺風格：清新無痕野餐風（Sage Green & Oatmeal White）
+==================================================
+*/
+
+/* 1. 變數宣告：清新野餐配色方案 */
+:root {
+    --bg-color: #f7f9f6;          /* 清新晨霧白 / 淺綠底 */
+    --card-bg: #ffffff;           /* 乾淨純白卡片 */
+    --card-hover: #f0f4ee;        /* 懸停時的微綠光澤 */
+    --primary-color: #4a7c59;     /* 鼠尾草深綠（主色調） */
+    --primary-hover: #3b6346;     /* 懸停深綠 */
+    --secondary-color: #e3a857;   /* 陽光黃 / 氣泡黃（點綴色） */
+    --accent-color: #88b04b;      /* 嫩草綠（亮點） */
+    --text-color: #2c3e35;        /* 森林深灰綠（內文） */
+    --text-muted: #6c8075;        /* 柔和灰綠（次要文字） */
+    --border-color: #e0e8e2;      /* 清爽微綠邊框 */
+    --shadow: 0 10px 25px -5px rgba(74, 124, 89, 0.08), 0 8px 10px -6px rgba(0, 0, 0, 0.04);
+    --transition: all 0.3s ease;
+}
+
+/* 2. 基礎重置與排版設定（已修正星號 * 選擇器） */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans TC", sans-serif;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    line-height: 1.8;
+}
+
+/* 3. 固定頂部導覽列 (Navbar) */
+header#top {
+    background: linear-gradient(135deg, #eef4ec 0%, #e2ece0 100%);
+    border-bottom: 2px solid var(--border-color);
+    box-shadow: var(--shadow);
+}
+
+.nav-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo a {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.main-nav ul {
+    display: flex;
+    list-style: none;
+    gap: 1.25rem;
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+    padding: 0.4rem 0.8rem;
+    border-radius: 6px;
+    transition: var(--transition);
+}
+
+.main-nav a:hover {
+    background-color: var(--primary-color);
+    color: #ffffff;
+}
+
+/* 4. 主視覺區塊 (Hero Section) */
+.hero-content {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 3.5rem 2rem 3rem 2rem;
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-size: 2.75rem;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.hero-content .tagline {
+    font-size: 1.2rem;
+    color: var(--secondary-color);
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.hero-content .hero-desc {
+    font-size: 1.15rem;
+    margin-bottom: 1rem;
+}
+
+.reading-focus {
+    background-color: rgba(227, 168, 87, 0.25);
+    color: #b37416;
+    padding: 0.25rem 0.6rem;
+    border-radius: 4px;
+    font-weight: bold;
+    border: 1px solid rgba(227, 168, 87, 0.5);
+}
+
+/* 5. 頁內快選目錄 (Quick Nav) */
+.quick-nav {
+    max-width: 900px;
+    margin: -1.5rem auto 2.5rem auto;
+    background: var(--card-bg);
+    padding: 1.5rem 2rem;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border-color);
+    border-top: 4px solid var(--primary-color);
+}
+
+.quick-nav h2 {
+    font-size: 1.2rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 0.4rem;
+}
+
+.quick-nav ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 0.75rem;
+    list-style: none;
+}
+
+.quick-nav a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.5rem;
+    border-radius: 6px;
+    display: block;
+    background-color: var(--bg-color);
+    border: 1px solid var(--border-color);
+    transition: var(--transition);
+}
+
+.quick-nav a:hover {
+    background-color: var(--primary-color);
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+/* 6. 主要內容排版 */
+main#main-content {
+    max-width: 900px;
+    margin: 0 auto 4rem auto;
+    padding: 0 1.5rem;
+}
+
+section {
+    background: var(--card-bg);
+    padding: 2.5rem;
+    margin-bottom: 2rem;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border-color);
+    transition: var(--transition);
+}
+
+section:hover {
+    background-color: var(--card-hover);
+}
+
+section h2 {
+    font-size: 1.65rem;
+    color: var(--primary-color);
+    margin-bottom: 1.25rem;
+    border-left: 5px solid var(--secondary-color);
+    padding-left: 0.75rem;
+}
+
+section h3 {
+    font-size: 1.2rem;
+    color: var(--primary-hover);
+    margin: 1.5rem 0 0.75rem 0;
+}
+
+section p {
+    margin-bottom: 1rem;
+    text-align: justify;
+}
+
+section ul, section ol {
+    margin: 1rem 0 1.5rem 1.5rem;
+}
+
+section li {
+    margin-bottom: 0.5rem;
+}
+
+/* 7. 表格樣式 (CSS Table) */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5rem 0;
+    background-color: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+}
+
+caption {
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-bottom: 0.75rem;
+    font-size: 1.05rem;
+}
+
+th, td {
+    padding: 0.9rem 1.1rem;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+}
+
+thead th {
+    background-color: #eaf1e8;
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+tbody tr:hover {
+    background-color: rgba(74, 124, 89, 0.05);
+}
+
+tbody th[scope="row"] {
+    background-color: #f2f7f1;
+    color: var(--primary-hover);
+}
+
+/* 8. CSS Grid 網格佈局（SWOT、Persona、Team） */
+.swot-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+    gap: 1.25rem;
+    margin: 1.5rem 0;
+}
+
+.swot-card {
+    background: #f9fbf8;
+    padding: 1.25rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    border-top: 3px solid var(--primary-color);
+}
+
+.persona-grid, .team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.persona-card, .team-card {
+    background: #f9fbf8;
+    padding: 1.25rem;
+    border-radius: 10px;
+    border: 1px solid var(--border-color);
+    text-align: center;
+}
+
+.persona-fig img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 0.75rem;
+}
+
+.positioning-box {
+    background: #edf4eb;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border-left: 4px solid var(--primary-color);
+    margin-top: 1rem;
+}
+
+.highlight-text {
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: var(--primary-color);
+}
+
+/* 9. 媒體呈現（圖片與 Aside） */
+figure {
+    margin: 1.5rem 0;
+    text-align: center;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.06);
+}
+
+figcaption {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+aside#tips {
+    background: linear-gradient(135deg, #eff5ed 0%, #e3eee0 100%);
+    border-left: 5px solid var(--primary-color);
+    padding: 2rem;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border-color);
+}
+
+details {
+    background: #ffffff;
+    padding: 1rem 1.25rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    margin-top: 1rem;
+}
+
+summary {
+    font-weight: bold;
+    color: var(--primary-color);
+    cursor: pointer;
+}
+
+/* 10. 頁尾樣式 */
+footer {
+    background-color: #23332a;
+    color: #d1ded6;
+    text-align: center;
+    padding: 3rem 1.5rem;
+    border-top: 1px solid var(--border-color);
+}
+
+footer strong {
+    color: #ffffff;
+}
+
+footer a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.4rem 1rem;
+    border: 1px solid var(--secondary-color);
+    border-radius: 6px;
+    transition: var(--transition);
+}
+
+footer a:hover {
+    background-color: var(--secondary-color);
+    color: #23332a;
+}
+
+/* 11. RWD 手持裝置響應式微調 */
+@media (max-width: 768px) {
+    .nav-container {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+    
+    .main-nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+    
+    section {
+        padding: 1.5rem;
+    }
+    
+    .swot-grid {
+        grid-template-columns: 1fr;
+    }
+}
