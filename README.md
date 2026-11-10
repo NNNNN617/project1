@@ -8,19 +8,21 @@
 
 * **專案名稱**：甲五 - Sober Picnic 無痕野餐官方網站
 * **開發團隊**：甲五團隊
-* **參考專案範例**：[ditang-film-festival PROMPTS.md](https://github.com/alyssahope2806/ditang-film-festival/blob/main/PROMPTS.md)
 
 ---
 
-## 🎯 核心 Vibe Coding 指令紀錄
+## 🎯 核心 Vibe Coding 指令類別與紀錄
 
-### 1. 專案需求與企劃書解析 Prompt
-**目的**：將 PDF 企劃書內容全面轉化為語意化 HTML5 網頁結構。
+### 1. 專案需求與企劃轉化
+將完整企劃書 PDF 內容轉換為結構化網頁，包含導覽列、頁內目錄、專案摘要、現況與競品分析表、SWOT/SO 策略、Z 世代 Persona 網格、十字定位矩陣、故事大綱與團隊心得，並配置完整 SEO 標籤。
 
-```text
-請依照 HW07 的規範，將《甲五 Sober Picnic》企劃書 PDF 內容轉換為完整的官方網站 HTML。
-要求：
-1. 包含導覽列 (Navbar)、頁內快速目錄 (Quick Nav)、側邊欄重點與頁尾。
-2. 包含專案摘要、現況與競品分析表、SWOT/SO 策略、Z 世代 Persona 網格、十字定位矩陣、故事大綱與團隊心得。
-3. 加入完整的 SEO Meta 標籤與 Open Graph 社交標籤。
-4. 清除舊有洲際棒球場的所有內容，改為 Sober Picnic 主題。project1/project1.html](https://d1243359.ct.ws/project1/project1.html)
+### 2. 視覺風格與色調設計
+指定以「無痕野餐」為主題的獨立 CSS 視覺設計，主色調採用鼠尾草深綠 (#4a7c59)、燕麥奶白 (#f7f9f6) 與陽光黃 (#e3a857)，並運用 CSS Grid 與 Flexbox 實現響應式排版 (RWD)。
+
+### 3. 多分鏡網格畫廊排版
+將廣告劇本區塊的故事分鏡規劃為自適應的多圖網格畫廊 (Storyboard Gallery)，提升視覺豐富度與閱讀體驗。
+
+---
+
+## 🔗 相關資源與檔案連結
+* 🌐 **專案線上展示網址**：`https://d1243359.ct.ws/project1/project1.html`
