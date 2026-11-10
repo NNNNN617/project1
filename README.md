@@ -86,4 +86,3 @@ sober-picnic-website/
 ## 🔗 相關連結 (Project Links)
 
 * 🌐 **正式上線網站（InfinityFree 託管）**：[https://d1243359.ct.ws/project1/project1.html](https://d1243359.ct.ws/project1/project1.html)
-* 🐙 **GitHub 程式碼儲存庫**：[https://github.com/YourGitHubAccount/sober-picnic](https://github.com/YourGitHubAccount/sober-picnic) *(請替換為你的實際 GitHub 帳號與 Repo 網址)*
